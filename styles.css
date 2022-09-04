@@ -7,10 +7,21 @@
   --button-hover-clr: hsl(156, 42%, 18%);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--Cream);
   font-size: 87.5%;
   margin: 0px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 p {
@@ -18,32 +29,26 @@ p {
 }
 
 .main {
-  min-height: 97vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .wrapper {
-  height: 25rem;
+  /* height: 25rem; */
   display: flex;
   flex-direction: row;
-  width: 35rem;
+  max-width: 35rem;
 }
 
 .image_wrap {
-  width: 50%;
-  height: 100%;
+  flex: 1 1 50%;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
   background-image: url(./images/image-product-desktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  /* flex: 1 1 50%; */
 }
 
 .content_wrap {
-  width: 50%;
-  height: 100%;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   padding: 1.5rem;
@@ -52,6 +57,8 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 1 1 50%;
+  gap: 1rem;
 }
 
 .price {
@@ -135,19 +142,18 @@ p {
     max-height: 35rem;
   }
   .content_wrap {
-    width: 100%;
     border-top-right-radius: 0rem;
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
-    max-height: 25rem;
+    flex: 1 1 50%;
   }
   .image_wrap {
-    height: 70%;
+    /* height: 70%; */
     background-position: center;
-    width: 100%;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     border-bottom-left-radius: 0;
-    max-height: 20rem;
+    /* max-height: 20rem; */
+    flex: 1 1 50%;
   }
 }
